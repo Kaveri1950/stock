@@ -8,5 +8,5 @@ statsmodels
 yfinance
 scipy
 plotly
-pandas-ta
+#pandas-ta
 ta
