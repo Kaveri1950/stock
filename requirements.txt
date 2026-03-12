@@ -8,5 +8,5 @@ statsmodels
 yfinance
 scipy
 plotly
-pandas-ta
+pandas_ta
 ta==0.10.2
