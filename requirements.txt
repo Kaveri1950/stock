@@ -1,0 +1,12 @@
+streamlit>=1.30
+pandas==2.1.4
+numpy>=1.24
+matplotlib
+seaborn
+scikit-learn
+statsmodels
+yfinance
+scipy
+plotly
+pandas-ta
+ta==0.10.2
