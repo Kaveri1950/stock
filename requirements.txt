@@ -1,6 +1,6 @@
 streamlit>=1.30
-pandas==2.1.4
-numpy>=1.24
+pandas
+numpy
 matplotlib
 seaborn
 scikit-learn
@@ -8,5 +8,5 @@ statsmodels
 yfinance
 scipy
 plotly
-pandas_ta
-ta==0.10.2
+pandas-ta
+ta
