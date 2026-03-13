@@ -1,110 +1,130 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Trading Guide App",
+    page_title="Trading Guide",
     page_icon="📈",
     layout="wide"
 )
 
-# ---------------- HERO SECTION ---------------- #
-
+# ---------- Custom Styling ---------- #
 st.markdown("""
-<h1 style='text-align:center; color:#1f77b4; font-size:48px;'>
-📈 Trading Guide
-</h1>
-<p style='text-align:center; font-size:20px; color:gray;'>
-A data-driven platform to analyze stocks, forecast trends,
-and evaluate investment risk before making financial decisions.
-</p>
+<style>
+
+.stApp {
+    background-color: #f5f7fb;
+}
+
+.title {
+    font-size:48px;
+    font-weight:700;
+    color:#1a1a1a;
+}
+
+.subtitle {
+    font-size:20px;
+    color:#555;
+}
+
+.card {
+    background-color:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    border:1px solid #ececec;
+}
+
+.card-title {
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.card-text {
+    color:#555;
+    font-size:16px;
+}
+
+.section-title {
+    font-size:30px;
+    font-weight:700;
+    margin-top:20px;
+}
+
+</style>
 """, unsafe_allow_html=True)
+
+# ---------- Header ---------- #
+
+st.markdown('<p class="title">📈 Trading Guide</p>', unsafe_allow_html=True)
+st.markdown(
+    '<p class="subtitle">A platform to analyze stocks, forecast trends, and understand investment risk before making financial decisions.</p>',
+    unsafe_allow_html=True
+)
 
 st.image("app.png", use_container_width=True)
 
 st.markdown("---")
 
+# ---------- Features ---------- #
 
-# ---------------- FEATURES SECTION ---------------- #
+st.markdown('<p class="section-title">Platform Features</p>', unsafe_allow_html=True)
 
-st.markdown(
-"""
-<h2 style='text-align:center;'>Platform Features</h2>
-<p style='text-align:center; color:gray;'>Tools designed to help you make smarter investment decisions.</p>
-""",
-unsafe_allow_html=True
-)
-
-col1, col2, col3, col4 = st.columns(4)
+col1, col2 = st.columns(2)
 
 with col1:
-    st.metric(label="📊 Stock Information", value="Real-time Insights")
-    st.write("Access historical prices, company data, and market indicators to understand stock performance.")
+    st.markdown("""
+    <div class="card">
+        <div class="card-title">📊 Stock Information</div>
+        <div class="card-text">
+        Explore historical stock prices, company information, and key financial indicators
+        to better understand stock performance.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="card">
+        <div class="card-title">📈 Stock Prediction</div>
+        <div class="card-text">
+        Forecast the next 30 days of stock prices using historical data
+        and time-series prediction models.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 with col2:
-    st.metric(label="📈 Stock Prediction", value="30-Day Forecast")
-    st.write("Predict future stock prices using machine learning models trained on historical market data.")
+    st.markdown("""
+    <div class="card">
+        <div class="card-title">💰 CAPM Expected Return</div>
+        <div class="card-text">
+        Estimate expected stock returns using the Capital Asset Pricing Model
+        and evaluate risk-adjusted investment opportunities.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
-with col3:
-    st.metric(label="💰 CAPM Expected Return", value="Risk-Adjusted")
-    st.write("Estimate expected returns based on market risk using the Capital Asset Pricing Model.")
+    st.markdown("<br>", unsafe_allow_html=True)
 
-with col4:
-    st.metric(label="⚖️ CAPM Beta", value="Volatility Analysis")
-    st.write("Measure how sensitive a stock is to market movements and evaluate investment risk.")
-
-
-st.markdown("---")
-
-
-# ---------------- WHY USE THIS APP ---------------- #
-
-st.markdown(
-"""
-<h2 style='text-align:center;'>Why Use This Platform?</h2>
-""",
-unsafe_allow_html=True
-)
-
-c1, c2 = st.columns(2)
-
-with c1:
-    st.markdown("### 📉 Data-Driven Decisions")
-    st.write("Leverage analytics and predictive models to support informed investment strategies.")
-
-    st.markdown("### 📊 Interactive Visualizations")
-    st.write("Explore stock trends with intuitive charts and financial indicators.")
-
-with c2:
-    st.markdown("### ⚡ Fast Market Insights")
-    st.write("Quickly analyze stocks and compare potential investment opportunities.")
-
-    st.markdown("### 🧠 Risk & Return Analysis")
-    st.write("Evaluate the relationship between risk and expected returns before investing.")
-
+    st.markdown("""
+    <div class="card">
+        <div class="card-title">⚖️ CAPM Beta Analysis</div>
+        <div class="card-text">
+        Measure stock volatility relative to the market and understand
+        how risky an asset is compared to market movements.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
 
-
-# ---------------- CALL TO ACTION ---------------- #
-
-st.markdown(
-"""
-<h3 style='text-align:center;'>Start Exploring Stocks Today 🚀</h3>
-<p style='text-align:center; color:gray;'>
-Navigate through the sidebar to explore stock analytics, forecasts,
-and risk evaluation tools.
-</p>
-""",
-unsafe_allow_html=True
-)
-
-
-# ---------------- FOOTER ---------------- #
+# ---------- Footer ---------- #
 
 st.markdown(
 """
-<hr>
-<p style='text-align:center; color:gray; font-size:14px;'>
-Built with Streamlit • Data Analytics Project
+<p style='text-align:center;color:#888;font-size:14px'>
+Built with Streamlit • Stock Analytics Project
 </p>
 """,
 unsafe_allow_html=True
