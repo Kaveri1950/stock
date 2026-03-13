@@ -10,7 +10,7 @@ st.title("Trading Guide App :bar_chart:")
 
 st.header("We provide the Greatest platform for you to collect all information prior to investing in stocks.")
 
-st.image("app.jpg")
+st.image("app.png")
 
 st.markdown("## We provide the following services:")
 
