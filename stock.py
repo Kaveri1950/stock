@@ -9,22 +9,16 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* Page Background */
 .stApp {
-    background-color: #eef2f7;
-}
-
-/* Main container */
-.block-container {
-    padding-top: 2rem;
+    background-color: #f5f7fb;
 }
 
 /* Main Title */
 .main-title {
-    font-size:80px;
+    font-size:78px;
     font-weight:800;
     text-align:center;
-    color:#111;
+    color:#1a1a1a;
     margin-bottom:10px;
 }
 
@@ -33,30 +27,23 @@ st.markdown("""
     font-size:22px;
     text-align:center;
     color:#555;
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
 
 /* Section title */
 .section-title {
     font-size:34px;
     font-weight:700;
-    color:#111;
+    color:#1a1a1a;
 }
 
 /* Feature Cards */
 .card {
-    background-color:#ffffff;
-    padding:28px;
-    border-radius:14px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    border:1px solid #e6e9ef;
-    transition: all 0.2s ease-in-out;
-}
-
-/* Hover effect */
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    background-color:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    border:1px solid #ececec;
 }
 
 .card-title {
@@ -154,7 +141,7 @@ st.markdown("---")
 
 st.markdown(
 """
-<p style='text-align:center;color:#777;font-size:14px'>
+<p style='text-align:center;color:#888;font-size:14px'>
 Built with Streamlit • Stock Analytics Project
 </p>
 """,
