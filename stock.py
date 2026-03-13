@@ -1,151 +1,107 @@
 import streamlit as st
 
+# Page config
 st.set_page_config(
-    page_title="Trading Guide",
+    page_title="Trading Guide App",
     layout="wide"
 )
 
-# ---------- Custom Styling ---------- #
+# Custom CSS for styling
 st.markdown("""
 <style>
 
-/* Page background */
 .stApp {
-    background-color: #eef2f7;
+    background: linear-gradient(135deg, #eef2f7, #ffffff);
 }
 
-/* Hero Title */
-.main-title {
-    font-size:120px;
-    font-weight:900;
-    text-align:center;
-    color:#111;
-    margin-top:120px;
-    margin-bottom:10px;
+.big-title {
+    font-size: 70px;
+    font-weight: 800;
+    text-align: center;
+    color: #1f2937;
+    margin-top: 20px;
 }
 
-/* Subtitle */
 .subtitle {
-    font-size:24px;
-    text-align:center;
-    color:#555;
-    margin-bottom:60px;
+    font-size: 22px;
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 40px;
 }
 
-/* Section title */
-.section-title {
-    font-size:34px;
-    font-weight:700;
-    color:#111;
+.feature-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
 }
 
-/* Feature Cards */
-.card {
-    background-color:#ffffff;
-    padding:28px;
-    border-radius:14px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    border:1px solid #e6e9ef;
+.feature-title {
+    font-size: 22px;
+    font-weight: 700;
 }
 
-.card-title {
-    font-size:20px;
-    font-weight:600;
-    margin-bottom:10px;
-}
-
-.card-text {
-    color:#555;
-    font-size:16px;
+.feature-text {
+    font-size: 16px;
+    color: #555;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 
-# ---------- HERO SECTION ---------- #
-
-st.markdown('<p class="main-title">Trading Guide</p>', unsafe_allow_html=True)
+# BIG HEADLINE
+st.markdown('<p class="big-title">Trading Guide Platform</p>', unsafe_allow_html=True)
 
 st.markdown(
-"""
-<p class="subtitle">
-A platform to analyze stocks, forecast trends, and understand investment risk before making financial decisions.
-</p>
-""",
-unsafe_allow_html=True)
+    '<p class="subtitle">A smart platform to analyze stocks, predict prices, and evaluate investment risk before making decisions.</p>',
+    unsafe_allow_html=True
+)
 
 st.image("app.png", use_container_width=True)
 
-st.markdown("---")
+st.markdown("## Platform Features")
 
-
-# ---------- Features Section ---------- #
-
-st.markdown('<p class="section-title">Platform Features</p>', unsafe_allow_html=True)
-
-col1, col2 = st.columns(2)
+# Feature columns
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-
     st.markdown("""
-    <div class="card">
-        <div class="card-title">Stock Information</div>
-        <div class="card-text">
-        Explore historical stock prices, company information, and key financial indicators
-        to better understand stock performance.
+    <div class="feature-card">
+        <div class="feature-title">📊 Stock Information</div>
+        <div class="feature-text">
+        Explore detailed company and stock market information to understand performance and trends.
         </div>
     </div>
     """, unsafe_allow_html=True)
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    st.markdown("""
-    <div class="card">
-        <div class="card-title">Stock Prediction</div>
-        <div class="card-text">
-        Forecast the next 30 days of stock prices using historical data
-        and time-series prediction models.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
 
 with col2:
-
     st.markdown("""
-    <div class="card">
-        <div class="card-title">CAPM Expected Return</div>
-        <div class="card-text">
-        Estimate expected stock returns using the Capital Asset Pricing Model
-        and evaluate risk-adjusted investment opportunities.
+    <div class="feature-card">
+        <div class="feature-title">📈 Stock Prediction</div>
+        <div class="feature-text">
+        Forecast future closing prices using historical stock data and predictive models.
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("<br>", unsafe_allow_html=True)
-
+with col3:
     st.markdown("""
-    <div class="card">
-        <div class="card-title">CAPM Beta Analysis</div>
-        <div class="card-text">
-        Measure stock volatility relative to the market and understand
-        how risky an asset is compared to market movements.
+    <div class="feature-card">
+        <div class="feature-title">💰 CAPM Return</div>
+        <div class="feature-text">
+        Estimate expected stock returns using the Capital Asset Pricing Model.
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-
-st.markdown("---")
-
-
-# ---------- Footer ---------- #
-
-st.markdown(
-"""
-<p style='text-align:center;color:#777;font-size:14px'>
-Built with Streamlit • Stock Analytics Project
-</p>
-""",
-unsafe_allow_html=True
-)
+with col4:
+    st.markdown("""
+    <div class="feature-card">
+        <div class="feature-title">📉 CAPM Beta</div>
+        <div class="feature-text">
+        Measure the risk of individual stocks relative to the overall market.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
