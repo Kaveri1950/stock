@@ -14,21 +14,22 @@ st.markdown("""
     background-color: #eef2f7;
 }
 
-/* Big Page Title */
+/* Hero Title */
 .main-title {
-    font-size:90px;
-    font-weight:800;
+    font-size:120px;
+    font-weight:900;
     text-align:center;
     color:#111;
+    margin-top:120px;
     margin-bottom:10px;
 }
 
 /* Subtitle */
 .subtitle {
-    font-size:22px;
+    font-size:24px;
     text-align:center;
     color:#555;
-    margin-bottom:35px;
+    margin-bottom:60px;
 }
 
 /* Section title */
@@ -62,7 +63,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# ---------- Header ---------- #
+# ---------- HERO SECTION ---------- #
 
 st.markdown('<p class="main-title">Trading Guide</p>', unsafe_allow_html=True)
 
