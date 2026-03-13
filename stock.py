@@ -9,16 +9,17 @@ st.set_page_config(
 st.markdown("""
 <style>
 
+/* Page background */
 .stApp {
-    background-color: #f5f7fb;
+    background-color: #eef2f7;
 }
 
-/* Main Title */
+/* Big Page Title */
 .main-title {
-    font-size:100px;
-    font-weight:1000;
+    font-size:90px;
+    font-weight:800;
     text-align:center;
-    color:#1a1a1a;
+    color:#111;
     margin-bottom:10px;
 }
 
@@ -27,23 +28,23 @@ st.markdown("""
     font-size:22px;
     text-align:center;
     color:#555;
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
 
 /* Section title */
 .section-title {
     font-size:34px;
     font-weight:700;
-    color:#1a1a1a;
+    color:#111;
 }
 
 /* Feature Cards */
 .card {
-    background-color:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
-    border:1px solid #ececec;
+    background-color:#ffffff;
+    padding:28px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    border:1px solid #e6e9ef;
 }
 
 .card-title {
@@ -141,7 +142,7 @@ st.markdown("---")
 
 st.markdown(
 """
-<p style='text-align:center;color:#888;font-size:14px'>
+<p style='text-align:center;color:#777;font-size:14px'>
 Built with Streamlit • Stock Analytics Project
 </p>
 """,
